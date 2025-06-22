@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Catalog</title>
     <style>
       .footer-icon:hover path {
         fill: #000;
@@ -19,28 +19,20 @@
           style="background-color: blue"
       /></a>
 
-      <input type="search" placeholder="Search" />
-      <nav>
-        <a href="catalog.html">Catalog</a><a href="cart.html">Cart</a>
-      </nav>
-      <h1>Bicycle as a life decoration</h1>
-      <p>Pedal your way to health</p>
-      <a href="catalog.html">Go to catalog</a>
+      <input type="search" />
+      <nav><a href="index.html">Home</a><a href="cart.html">Cart</a></nav>
+      <h1>Catalog</h1>
     </header>
     <main>
+      <form>
+        <select name="sort-order">
+          <option value="1">Order: newest first</option>
+          <option value="2">Order: oldest first</option>
+          <option value="3">Order: most expensive first</option>
+          <option value="4">Order: cheapest first</option>
+        </select>
+      </form>
       <section>
-        <h2>Bicycles for...</h2>
-        <div>LEISURE</div>
-        <div>SPORT</div>
-        <div>HOBBY</div>
-        <div>CHILDREN</div>
-        <div>FAMILY</div>
-      </section>
-      <section>
-        <h2>Promotions</h2>
-      </section>
-      <section>
-        <h2>Catalog of bicycles and accessories</h2>
         <img src="./img/products/product1.jpg" alt="DeWolf Mountain Bike" />
         <h3>DeWolf Mountain Bike</h3>
         <p>
