@@ -1,9 +1,15 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles.css" />
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
 		<title>Home</title>
 	</head>
 	<body>
@@ -42,20 +48,20 @@
 				</nav>
 			</div>
 			<div class="top__content">
-				<h1>Bicycle as a life decoration</h1>
-				<p>Pedal your way to health</p>
-				<a href="catalog.html">Go to catalog</a>
+				<h1 class="top__heading">Bicycle as a life decoration</h1>
+				<p class="top__description">Pedal your way to health</p>
+				<a href="catalog.html" class="top__link">Go to catalog</a>
 			</div>
 		</header>
 		<main class="main">
 			<section class="for">
 				<h2 class="for__heading">Bicycles for...</h2>
 				<div class="for__content">
-					<div class="for__item">LEISURE</div>
-					<div class="for__item">SPORT</div>
-					<div class="for__item">HOBBY</div>
-					<div class="for__item">CHILDREN</div>
-					<div class="for__item">FAMILY</div>
+					<div class="for__item for__item--rest">REST</div>
+					<div class="for__item for__item--sport">SPORT</div>
+					<div class="for__item for__item--hobby">HOBBY</div>
+					<div class="for__item for__item--children">CHILDREN</div>
+					<div class="for__item for__item--family">FAMILY</div>
 				</div>
 			</section>
 			<section class="action-box">
@@ -63,7 +69,7 @@
 				<div class="action-box__content">
 					<div class="action">
 						<img
-							src="./img/action/action1.jpg"
+							src="img/actions/action1.jpg"
 							alt="Promotion 1"
 							class="action__img"
 						/>
@@ -74,7 +80,7 @@
 						</p>
 						<div class="action__prices">
 							<p>788 PLN</p>
-							<p>1 219 PLN</p>
+							<p class="action__prices--last">1 219 PLN</p>
 						</div>
 					</div>
 				</div>
@@ -85,7 +91,7 @@
 				</h2>
 				<div class="product">
 					<img
-						src="./img/products/product1.jpg"
+						src="/img/products/product1.jpg"
 						alt="DeWolf Mountain Bike"
 						class="product__img"
 					/>
@@ -125,19 +131,19 @@
 					</text>
 				</svg>
 			</a>
-			<div class="footer__content">
+			<div class="footer-content">
 				<div class="footer__info">
 					<nav class="footer__nav">
-						<h4>Menu</h4>
-						<ul>
+						<h4 class="footer__nav-heading">Menu</h4>
+						<ul class="footer__nav-menu">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="catalog.html">Catalog</a></li>
 							<li><a href="cart.html">Cart</a></li>
 						</ul>
 					</nav>
 					<div class="footer__nav">
-						<h4>Contacts</h4>
-						<a href="tel:+48115557070">+48 115 557 070</a>
+						<h4 class="footer__nav-heading">Contacts</h4>
+						<a href="tel:+48115557070" >+48 115 557 070</a>
 						<a href="mailto:velo@city.com">velo@city.com</a>
 						<div class="footer__icons">
 							<svg
@@ -183,9 +189,17 @@
 				</div>
 
 				<form action="#" class="footer__form">
-					<h4>Subscribe to be the first to know about promotions</h4>
-					<input type="email" placeholder="Your e-mail" />
-					<button type="submit">Subscribe</button>
+					<h4 class="footer__form-heading">
+						Subscribe to be the first to know about promotions
+					</h4>
+					<input
+						type="email"
+						placeholder="Your e-mail"
+						class="footer__form-input"
+					/>
+					<button type="submit" class="footer-button">
+						Subscribe
+					</button>
 				</form>
 			</div>
 		</footer>

@@ -1,16 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="styles.css" />
 		<title>Cart</title>
 	</head>
 	<body>
-		<header class="header">
+		<header class="header--cart">
 			<div class="top">
 				<a href="/" class="logo"
 					><svg
+						class="logo--top"
 						width="194.212769"
 						height="25.558594"
 						viewBox="0 0 194.213 25.5586"
@@ -31,140 +38,178 @@
 						>
 							Velo-city
 						</text>
-					</svg></a
-				>
+					</svg>
+				</a>
 
-				<input type="search" placeholder="Search" class="top__search-form" />
+				<input type="search" placeholder="Найти" class="top__search-form" />
 				<nav class="top__nav">
-					<a href="/" class="top__nav-item">Home</a>
+					<a href="index.html" class="top__nav-item">Home</a>
 					<a href="catalog.html" class="top__nav-item">Catalog</a>
 				</nav>
 			</div>
-			<h1>Cart</h1>
+			<h1 class="top__heading">Catalog</h1>
 		</header>
 		<main>
-			<div class="cart-content">
-				<div class="cart-content__name">
-					<p>Product</p>
-					<p>Qty</p>
-				</div>
-				<div class="cart-content__item">
-					<div class="cart-content--item-left">
-						<img
-							src="./img/cart/cart1.jpg"
-							alt="Selected product"
-							class="cart-content--img-top"
-						/>
-						<div class="cart-content__info">
-							<a href="#" class="cart-content__info-heading">OYYO BL30 Bell</a>
-							<p class="cart-content__info-description">
-								The bell is made of a plastic body with a durable steel cover.
-							</p>
-							<p class="cart-content__price">17 PLN.</p>
-							<div class="cart-link">
-								<a href="#" class="cart-link__choice">Favorites</a>
-								<a href="#" class="cart-link__choice">Remove</a>
+			<div class="order-block">
+				<div class="cart-content">
+					<div class="cart-content__name">
+						<p>Product</p>
+						<p>Qty</p>
+					</div>
+					<div class="cart-content__item">
+						<div class="cart-content--item-left">
+							<img
+								src="./img/cart/cart1.jpg"
+								alt="Selected product"
+								class="cart-content--img-top"
+							/>
+							<div class="cart-content__info">
+								<a href="#" class="cart-content__info-heading"
+									>OYYO BL30 Bell</a
+								>
+								<p class="cart-content__info-description">
+									The bell is made of a plastic body with a durable steel cover.
+								</p>
+								<p class="cart-content__price">17 PLN</p>
+								<div class="cart-link">
+									<a href="#" class="cart-link__choice">Favorites</a>
+									<a href="#" class="cart-link__choice">Remove</a>
+								</div>
 							</div>
 						</div>
-					</div>
-					<input type="number" value="1" min="1" class="cart-content__input" />
-				</div>
-				<div class="cart-content-item">
-					<div class="cart-content--item-left">
-						<img
-							src="./img/cart/cart2.jpg"
-							alt="Selected product"
-							class="cart-content--img-top"
+						<input
+							type="number"
+							value="1"
+							min="1"
+							class="cart-content__input"
 						/>
-						<div class="cart-content__info">
-							<a href="#" class="cart-content__info-heading">OYYO Bike Lock</a>
-							<p class="cart-content__info-description">
-								OYYO CN01 chain lock - basic element of bicycle protection.
-								Length 90 cm and thickness 6 mm.
-							</p>
-							<p class="cart-content__price">90 PLN</p>
-							<div class="cart-link">
-								<a href="#" class="cart-link__choice">Favorites</a>
-								<a href="#" class="cart-link__choice">Remove</a>
+					</div>
+					<div class="cart-content__item">
+						<div class="cart-content--item-left">
+							<img
+								src="./img/cart/cart2.jpg"
+								alt="Selected product"
+								class="cart-content--img-top"
+							/>
+							<div class="cart-content__info">
+								<a href="#" class="cart-content__info-heading"
+									>OYYO Chain Lock</a
+								>
+								<p class="cart-content__info-description">
+									The OYYO chain lock is a basic element of bicycle protection.
+									Length 90 cm and thickness 6 mm.
+								</p>
+								<p class="cart-content__price">1 900 PLN</p>
+								<div class="cart-link">
+									<a href="#" class="cart-link__choice">Favorites</a>
+									<a href="#" class="cart-link__choice">Remove</a>
+								</div>
 							</div>
 						</div>
+						<input
+							type="number"
+							value="1"
+							min="1"
+							class="cart-content__input"
+						/>
 					</div>
-					<input type="number" value="1" min="1" class="cart-content__input" />
+					<div class="cart-button">
+						<button class="cart-button__reset">Clear Cart</button>
+						<a class="cart-button__route">Continue Shopping</a>
+					</div>
 				</div>
-				<div class="cart-button">
-					<button class="cart-button__reset">Clear Cart</button>
-					<a class="cart-button__route">Continue Shopping</a>
+				<div class="order-form">
+					<h3 class="order-heading">Order Form</h3>
+					<form action="#">
+						<input
+							type="text"
+							placeholder="Name Surname"
+							maxlength="30"
+							required
+							style="display: block"
+							class="order-form__input"
+						/>
+						<input
+							type="tel"
+							placeholder="+48 115 557 070"
+							maxlength="17"
+							required
+							title="Please enter the number in the format
+            +48XXXXXXXXXX"
+							pattern="\+48\d{10}"
+							class="order-form__input"
+						/>
+						<input
+							type="address"
+							placeholder="Delivery Address"
+							required
+							class="order-form__input"
+						/>
+						<h3 class="order-price">Итого: 2 270 руб.</h3>
+						<button type="submit" class="order-button">Оформить заказ</button>
+					</form>
 				</div>
 			</div>
-			<div>
-				<h3>Checkout</h3>
-				<form action="#">
-					<input
-						type="text"
-						placeholder="First Name Last Name"
-						maxlength="30"
-						required
-						style="display: block"
-					/>
-					<input
-						type="tel"
-						placeholder="+48 115 557 070"
-						maxlength="17"
-						required
-						title="Please enter the number in format +4XXXXXXXXXX"
-						pattern="\+4\d{10}"
-						style="display: block"
-					/>
-					<input
-						type="address"
-						placeholder="Delivery Address"
-						required
-						style="display: block"
-					/>
-					<h3>Total: 107 PLN</h3>
-					<button type="submit">Place Order</button>
-				</form>
-			</div>
+			<section class="action-box">
+				<h2 class="action-box__heading">Акции</h2>
+				<div class="action-box__content">
+					<div class="action">
+						<img
+							src="./img/actions/action1.jpg"
+							alt="Акция 1"
+							class="action__img"
+						/>
+						<h3 class="action__heading">Велосипед GTI</h3>
+						<p class="action__description">
+							Велосипед горный, литой диск, диск позволяет выдерживать сильные
+							удары о препятствия.
+						</p>
+						<div class="action__prices">
+							<p>16 673 руб.</p>
+							<p class="action__prices--last">25 799 руб.</p>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
-			<a href="/"
-				><a href="/" class="logo"
-					><svg
-						width="194.212769"
-						height="25.558594"
-						viewBox="0 0 194.213 25.5586"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink"
+			<a href="/" class="logo"
+				><svg
+					class="logo--footer"
+					width="194.212769"
+					height="25.558594"
+					viewBox="0 0 194.213 25.5586"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+				>
+					<desc>Velo-city Logo</desc>
+					<defs />
+					<text
+						x="97.106"
+						y="18"
+						text-anchor="middle"
+						font-family="Arial, sans-serif"
+						font-size="20"
+						font-weight="bold"
+						fill="#FFFFFF"
 					>
-						<desc>Velo-city Logo</desc>
-						<defs />
-						<text
-							x="97.106"
-							y="18"
-							text-anchor="middle"
-							font-family="Arial, sans-serif"
-							font-size="20"
-							font-weight="bold"
-							fill="#000000"
-						>
-							Velo-city
-						</text>
-					</svg></a
-				></a
-			>
+						Velo-city
+					</text>
+				</svg>
+			</a>
 			<div class="footer-content">
 				<div class="footer__info">
 					<nav class="footer__nav">
-						<h4>Menu</h4>
-						<ul>
-							<li><a href="/">Home</a></li>
+						<h4 class="footer__nav-heading">Menu</h4>
+						<ul class="footer__nav-menu">
+							<li><a href="index.html">Home</a></li>
 							<li><a href="catalog.html">Catalog</a></li>
 							<li><a href="cart.html">Cart</a></li>
 						</ul>
 					</nav>
 					<div class="footer__nav">
-						<h4>Contacts</h4>
+						<h4 class="footer__nav-heading">Contacts</h4>
 						<a href="tel:+48115557070">+48 115 557 070</a>
 						<a href="mailto:velo@city.com">velo@city.com</a>
 						<div class="footer__icons">
@@ -177,7 +222,6 @@
 								xmlns="http://www.w3.org/2000/svg"
 								xmlns:xlink="http://www.w3.org/1999/xlink"
 							>
-								<desc>Created with Pixso.</desc>
 								<defs />
 								<path
 									id="Vector"
@@ -196,7 +240,6 @@
 								xmlns="http://www.w3.org/2000/svg"
 								xmlns:xlink="http://www.w3.org/1999/xlink"
 							>
-								<desc>Created with Pixso.</desc>
 								<defs />
 								<path
 									id="Vector"
@@ -211,9 +254,15 @@
 				</div>
 
 				<form action="#" class="footer__form">
-					<h4>Subscribe to find out about promotions immediately</h4>
-					<input type="email" placeholder="Your e-mail" />
-					<button type="submit">Subscribe</button>
+					<h4 class="footer__form-heading">
+						Subscribe to be the first to know about promotions
+					</h4>
+					<input
+						type="email"
+						placeholder="Your e-mail"
+						class="footer__form-input"
+					/>
+					<button type="submit" class="footer-button">Subscribe</button>
 				</form>
 			</div>
 		</footer>
