@@ -1,0 +1,11 @@
+.logo--top path {
+	fill: #fff;
+}
+
+.logo--footer path {
+	fill: #000;
+}
+
+.footer-icon:hover path {
+  fill: #000;
+}
