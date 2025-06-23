@@ -1,3 +1,9 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 a {
 	text-decoration: none;
 }
@@ -14,10 +20,15 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	padding: 16px 120px 0;
+	margin-bottom: 64px;
 }
 
 .top {
+	display: flex;
 	border: 0.5px solid rgba(255, 255, 255, 0.8);
+	padding-bottom: 14px;
+	margin-bottom: 64px;
 }
 
 .logo--top path {
@@ -34,14 +45,16 @@ body {
 	font-weight: 600;
 	line-height: 70px;
 	letter-spacing: 0;
+	margin-bottom: 16px;
+	width: 700px;
 }
 
-.top__description {
+.top__motto {
 	color: rgb(255, 255, 255);
 	font-size: 24px;
-	font-weight: 400;
 	line-height: 32px;
 	letter-spacing: 0;
+	margin-bottom: 16px;
 }
 
 .top__link {
@@ -51,27 +64,61 @@ body {
 	text-decoration-line: underline;
 }
 
+.top__link:hover {
+	color: rgb(136, 136, 136);
+	font-family: Montserrat;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0;
+	text-decoration: none;
+}
+
 .top__search-form {
 	border: 1px solid rgb(255, 255, 255);
 	border-radius: 20px;
 	background: rgba(255, 255, 255, 0);
 	width: 288px;
 	height: 44px;
+	color: rgb(255, 255, 255);
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 400;
 	line-height: 20px;
 	letter-spacing: 0;
 	outline: none;
+	padding: 12px 32px;
 }
 
+/*font-family and font size in the placeholder must be specified specifically*/
 .top__search-form::placeholder {
 	color: rgb(255, 255, 255);
 	line-height: 20px;
-	letter-spacing: 0%;
+	letter-spacing: 0;
+	font-size: 16px;
+	font-family: Montserrat;
+}
+
+.top__search-form:focus {
+	background-color: rgb(255, 255, 255);
+	color: #000;
 }
 
 .top__nav-item {
 	color: #fff;
 	line-height: 20px;
-	letter-spacing: 0%;
+	letter-spacing: 0;
+}
+
+.top__nav-item:hover {
+	color: rgb(136, 136, 136);
+}
+
+.main {
+	padding: 0 120px 64px;
+}
+
+.for {
+	margin-bottom: 64px;
 }
 
 .for__heading,
@@ -82,6 +129,7 @@ body {
 	font-weight: 600;
 	line-height: 59px;
 	letter-spacing: 0;
+	margin-bottom: 32px;
 }
 
 .for__content {
@@ -124,6 +172,10 @@ body {
 	background-image: url(../img/directions/family.jpg);
 }
 
+.action-box {
+	margin-bottom: 72px;
+}
+
 .action,
 .product {
 	width: 378px;
@@ -133,6 +185,7 @@ body {
 .product__img {
 	height: 250px;
 	width: 370px;
+	margin-bottom: 10px;
 }
 
 .action__heading,
@@ -142,10 +195,20 @@ body {
 	font-weight: 500;
 	line-height: 29px;
 	letter-spacing: 0;
+	margin-bottom: 9px;
 }
 
 .action__description,
 .product__description {
+	color: rgb(136, 136, 136);
+	font-size: 24px;
+	line-height: 17px;
+	letter-spacing: 0;
+	margin-bottom: 12px;
+}
+
+.action__prices,
+.product__prices {
 	display: flex;
 	color: rgb(5, 5, 5);
 	font-size: 24px;
@@ -154,36 +217,36 @@ body {
 	letter-spacing: 0;
 }
 
-.action__prices,
-.product__prices {
-	color: rgb(0, 0, 0);
-	font-size: 24px;
-	font-weight: 600;
-	line-height: 29px;
-	letter-spacing: 0;
-}
-
 .action__prices--last {
 	color: rgb(136, 136, 136);
-	font-size: 24px;
-	font-weight: 500;
-	line-height: 29px;
-	letter-spacing: 0;
 	text-decoration-line: line-through;
+}
+
+.product-box {
+	margin-bottom: 40px;
 }
 
 .link-box {
 	color: rgb(0, 0, 0);
-	font-size: 16px;
-	font-weight: 400;
 	line-height: 24px;
 	letter-spacing: 0;
 	text-decoration-line: underline;
+	display: inline-block;
+}
+
+.link-box:hover {
+	color: rgb(136, 136, 136);
+	font-family: Montserrat;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0;
+	text-decoration: none;
 }
 
 .footer {
 	background: rgb(247, 246, 246);
 	display: flex;
+	padding: 32px 120px 60px;
 }
 
 .footer-content {
@@ -219,10 +282,15 @@ body {
 	letter-spacing: 0;
 }
 
+.footer__form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+}
+
 .footer__form-heading {
 	color: rgb(0, 0, 0);
 	font-size: 12px;
-	font-weight: 400;
 	line-height: 15px;
 	letter-spacing: 0;
 }
@@ -235,106 +303,164 @@ body {
 	width: 260px;
 	height: 40px;
 	outline: none;
-}
-
-/*font-family and font-size in placeholder must be specified specifically*/
-.footer__form-input::placeholder {
-  color: rgb(196, 196, 196);
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0;
-  font-size: 12px;
-  font-family: Montserrat;
-
-.footer-button {
-	border-radius: 16px;
-	background: rgba(222, 215, 215, 0.41);
+	padding: 12px 17px;
 	color: rgb(0, 0, 0);
+	font-family: Montserrat;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 15px;
 	letter-spacing: 0;
 }
 
-/*Styles for the catalog page*/
-.header--catalog {
-  height: 735px;
-  background-image: url(./img/bg/header-bg-catalog.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+/*font-family and font-size in placeholder must be specified specifically*/
+.footer__form-input::placeholder {
+	color: rgb(196, 196, 196);
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: 0;
+	font-size: 12px;
+	font-family: Montserrat;
 }
 
-.top-catalog {
-  display: flex;
+.footer-button {
+	border-radius: 16px;
+	background: rgba(222, 215, 215, 0.41);
+	color: rgb(0, 0, 0);
+	font-family: Montserrat;
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: 0;
+	border: none;
+	width: 260px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.footer-button:hover {
+	background: rgba(0, 0, 0);
+	color: #fff;
+}
+
+/*Styles for the catalog page*/
+.header--catalog {
+	background-image: url(./img/bg/header-bg-catalog.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 16px 120px 0;
+}
+
+.top--catalog {
+	margin-bottom: 127px;
+}
+
+.top__heading--catalog {
+	width: auto;
+}
+
+.top-heading-catalog {
+	display: flex;
 }
 
 .breadcrumbs a {
-  color: rgb(0, 0, 0);
-  line-height: 32px;
-  letter-spacing: 0;
+	color: rgb(0, 0, 0);
+	line-height: 32px;
+	letter-spacing: 0;
 }
 
 .breadcrumbs-link {
-  list-style-type: none;
-  display: flex;
+	list-style-type: none;
+	display: flex;
+}
+
+.breadcrumbs-link li:not(:last-child) a::after {
+	content: '/';
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 .sort-order {
-  width: 288px;
-  height: 41px;
-  box-sizing: border-box;
-  border: 1px solid rgb(196, 196, 196);
-  border-radius: 20px;
-  color: rgb(0, 0, 0);
-/*For select, as well as placeholder, font styles must be specified specifically*/  font-family: Montserrat;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0;
+	width: 288px;
+	height: 41px;
+	box-sizing: border-box;
+	border: 1px solid rgb(196, 196, 196);
+	border-radius: 20px;
+	color: rgb(0, 0, 0);
+	/*For select, as well as placeholder, font styles must be specified specifically*/
+	font-family: Montserrat;
+	font-family: Montserrat;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0;
+	padding-left: 14px;
+	padding-right: 14px;
+}
+
+.product-box--catalog {
+  margin-bottom: 32px;
 }
 
 .button-show-more {
-  border: none;
-/*For buttons, font styles also need to be specified specifically*/
-  font-family: Montserrat;
-  line-height: 24px;
-  letter-spacing: 0;
-  text-decoration-line: underline;
-  background-color: #fff;
-  padding: 0;
+	border: none;
+	/*For buttons, font styles also need to be specified specifically*/
+	font-family: Montserrat;
+	line-height: 24px;
+	letter-spacing: 0;
+	text-decoration-line: underline;
+	background-color: #fff;
+	padding: 0;
 }
 
 /*Styles for the cart page*/
 
 .header--cart {
-  height: 735px;
-  background-image: url(./img/bg/header-bg-cart.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	height: 735px;
+	background-image: url(./img/bg/header-bg-cart.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.top--cart {
+  margin-bottom: 144px;
+}
+
+.top__heading--cart {
+  width: auto;
+}
+
+.main--cart {
+  margin-bottom: 120px;
+  padding-bottom: 10px;
 }
 
 .order-block {
   display: flex;
+  margin-bottom: 64px;
 }
 
 .cart-content__name {
   display: flex;
   line-height: 20px;
   letter-spacing: 0px;
+  color: rgb(0, 0, 0);
 }
 
 .cart-content__item {
-  display: flex;
+	display: flex;
 }
 
 .cart-content--item-left {
-  border-top: 0.5px solid rgb(202, 205, 216);
-  display: flex;
+	border-top: 0.5px solid rgb(202, 205, 216);
+	display: flex;
 }
 
 .cart-content--img-top {
-  width: 173px;
+	width: 173px;
+}
+
+.cart-content__info {
+  width: 276px;
 }
 
 .cart-content__info-heading {
@@ -343,6 +469,8 @@ body {
   line-height: 29px;
   letter-spacing: 0;
   color: #000;
+  margin-bottom: 14px;
+  display: inline-block;
 }
 
 .cart-content__info-description {
@@ -350,21 +478,23 @@ body {
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0;
+  margin-bottom: 16px;
 }
 
 .cart-content__price {
-  color: rgb(5, 5, 5);
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0;
+	color: rgb(5, 5, 5);
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0;
+	margin-bottom: 15px;
 }
 
 .cart-link__choice {
-  color: rgb(0, 0, 0);
-  font-size: 14px;
-  line-height: 210%;
-  letter-spacing: 0;
-  text-decoration-line: underline;
+	color: rgb(0, 0, 0);
+	font-size: 14px;
+	line-height: 210%;
+	letter-spacing: 0;
+	text-decoration-line: underline;
 }
 
 .cart-content__input {
@@ -374,17 +504,23 @@ body {
   background: rgb(247, 246, 246);
   border: none;
   outline: none;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 210%;
+  letter-spacing: 0px;
+  text-align: center;
 }
 
 .cart-button {
-  display: flex;
+	display: flex;
 }
 
 .cart-button__reset,
 .cart-button__route {
   width: 200px;
   height: 37px;
-  box-sizing: border-box;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 50px;
   color: rgb(2, 2, 2);
@@ -399,9 +535,11 @@ body {
 
 .order-form {
   width: 379px;
+  height: 556px;
   border-radius: 20px;
   background: rgb(247, 246, 246);
   color: rgb(0, 0, 0);
+  padding: 42px 44px;
 }
 
 .order-heading {
@@ -410,6 +548,7 @@ body {
   font-weight: 700;
   line-height: 29px;
   letter-spacing: 0;
+  margin-bottom: 35px;
 }
 
 .order-form__input {
@@ -418,6 +557,13 @@ body {
   width: 288px;
   background: rgb(247, 246, 246);
   outline: none;
+  color: rgb(0, 0, 0);
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0;
+  padding-bottom: 3px;
+  margin-bottom: 44px;
 }
 
 .order-form__input::placeholder {
@@ -433,6 +579,9 @@ body {
   font-weight: 500;
   line-height: 29px;
   letter-spacing: 0;
+  margin-top: 64px;
+  margin-bottom: 18px;
+  text-align: center;
 }
 
 .order-button {
@@ -443,4 +592,14 @@ body {
   border-radius: 20px;
   font-family: Montserrat;
   font-size: 16px;
+  cursor: pointer;
+}
+
+.order-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.action-box--cart {
+  margin-bottom: 0;
 }
