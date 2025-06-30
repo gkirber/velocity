@@ -147,47 +147,52 @@ body {
 }
 
 .for__content {
+	display: grid;
+	gap: 32px;
+	grid-template-columns: repeat(12, 1fr);
 	color: rgb(255, 255, 255);
 	font-size: 34px;
 	font-weight: 600;
 	line-height: 41px;
 	letter-spacing: 0;
 	text-align: center;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 32px;
 }
 
 .for__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 415px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
 .for__item--rest {
+	grid-column: span 6;
 	width: 583px;
 	background-image: url(./img/directions/rest.jpg);
 }
 
 .for__item--sport {
+	grid-column: span 6;
 	width: 583px;
 	background-image: url(./img/directions/sport.jpg);
 }
 
 .for__item--hobby {
+	grid-column: span 4;
 	width: 378px;
 	background-image: url(./img/directions/hobby.jpg);
 }
 
-.for__item--children {
+.for__item--kids {
+	grid-column: span 4;
 	width: 378px;
-	background-image: url(./img/directions/children.jpg);
+	background-image: url(./img/directions/kids.jpg);
 }
 
 .for__item--family {
+	grid-column: span 4;
 	width: 378px;
 	background-image: url(./img/directions/family.jpg);
 }
@@ -198,7 +203,7 @@ body {
 
 .action-box__content {
 	display: flex;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 	gap: 36px 32px;
 }
 
@@ -277,6 +282,7 @@ body {
 
 .product-content {
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 56px 33px;
 }
@@ -303,14 +309,19 @@ body {
 }
 
 .footer {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
 	background: rgb(247, 246, 246);
-	display: flex;
-	justify-content: space-between;
 	padding-top: 32px;
 	padding-bottom: 60px;
 }
 
+.footer a {
+	grid-column: span 4;
+}
+
 .footer-content {
+	grid-column: span 8;
 	display: flex;
 	column-gap: 192px;
 }
@@ -374,6 +385,7 @@ body {
 	line-height: 15px;
 	letter-spacing: 0%;
 	text-align: left;
+	white-space: nowrap;
 }
 
 .footer__form-input {
@@ -539,11 +551,17 @@ body {
 }
 
 .order-block {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	gap: 33px;
 	margin-bottom: 64px;
+}
+
+.cart-content {
+	grid-column: span 8;
 }
 
 .cart-content__name {
@@ -557,6 +575,7 @@ body {
 
 .cart-content__item {
 	display: flex;
+	flex-direction: row;
 	column-gap: 31px;
 	align-items: flex-start;
 	width: 786px;
@@ -671,7 +690,7 @@ body {
 }
 
 .order-form {
-	width: 379px;
+	grid-column: span 4;
 	height: 556px;
 	border-radius: 20px;
 	background: rgb(247, 246, 246);
