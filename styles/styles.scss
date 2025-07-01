@@ -1,3 +1,7 @@
+@import 'number';
+@import 'global';
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -29,20 +33,19 @@ body {
 }
 
 .top {
-	display: flex;
-	justify-content: space-between;
+	@include flexBetween();
 	align-items: center;
-	border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+	border-bottom: $line;
 	padding-bottom: 14px;
 	margin-bottom: 64px;
 }
 
 .logo--top path {
-	fill: #fff;
+	fill: $colorLight;
 }
 
 .logo--footer path {
-	fill: #000;
+	fill: $colorDark;
 }
 
 .top__content {
@@ -52,7 +55,7 @@ body {
 }
 
 .top__heading {
-	color: rgb(255, 255, 255);
+	color: $colorLight;
 	font-size: 64px;
 	font-weight: 600;
 	line-height: 70px;
@@ -61,35 +64,35 @@ body {
 }
 
 .top__motto {
-	color: rgb(255, 255, 255);
+	color: $colorLight;
 	font-size: 24px;
 	line-height: 32px;
 	letter-spacing: 0;
 }
 
 .top__link {
-	color: rgb(255, 255, 255);
+	color: $colorLight;
 	line-height: 24px;
 	letter-spacing: 0;
 	text-decoration-line: underline;
 }
 
 .top__link:hover {
-	color: rgb(136, 136, 136);
+	color: $colorGray;
 	font-family: Montserrat;
-	font-size: 16px;
+	font-size: $fontSize;
 	line-height: 24px;
 	letter-spacing: 0;
 	text-decoration: none;
 }
 
 .top__search-form {
-	border: 1px solid rgb(255, 255, 255);
+	border: 1px solid $colorLight;
 	border-radius: 20px;
 	background: rgba(255, 255, 255, 0);
 	width: 288px;
 	height: 44px;
-	color: rgb(255, 255, 255);
+	color: $colorLight;
 	font-family: Montserrat;
 	font-size: 16px;
 	font-weight: 400;
@@ -100,16 +103,16 @@ body {
 }
 
 .top__search-form::placeholder {
-	color: rgb(255, 255, 255);
+	color: $colorLight;
 	line-height: 20px;
 	letter-spacing: 0;
-	font-size: 16px;
+	font-size: $fontSize;
 	font-family: Montserrat;
 }
 
 .top__search-form:focus {
-	background-color: rgb(255, 255, 255);
-	color: #000;
+	background-color: $colorLight;
+	color: $colorDark;
 }
 
 .top__nav {
@@ -118,13 +121,13 @@ body {
 }
 
 .top__nav-item {
-	color: #fff;
+	color: $colorLight;
 	line-height: 20px;
 	letter-spacing: 0;
 }
 
 .top__nav-item:hover {
-	color: rgb(136, 136, 136);
+	color: $colorGray;
 }
 
 .main {
@@ -138,7 +141,7 @@ body {
 .for__heading,
 .action-box__heading,
 .product-box__heading {
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-size: 48px;
 	font-weight: 600;
 	line-height: 59px;
@@ -150,7 +153,7 @@ body {
 	display: grid;
 	gap: 32px;
 	grid-template-columns: repeat(12, 1fr);
-	color: rgb(255, 255, 255);
+	color: $colorLight;
 	font-size: 34px;
 	font-weight: 600;
 	line-height: 41px;
@@ -209,7 +212,7 @@ body {
 
 .action,
 .product {
-	width: 378px;
+	width: ($widthContent - 32px * 2) / 3;
 	position: relative;
 }
 
@@ -236,16 +239,16 @@ body {
 }
 
 .in-cart-icon:hover path {
-	fill: #000;
+	fill: $colorDark;
 }
 
 .like-icon:hover path {
-	fill: #000;
+	fill: $colorDark;
 }
 
 .action__heading,
 .product__heading {
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-family: Montserrat;
 	font-size: 24px;
 	font-weight: 500;
@@ -257,7 +260,7 @@ body {
 
 .action__description,
 .product__description {
-	color: rgb(136, 136, 136);
+	color: $colorGray;
 	font-size: 14px;
 	line-height: 17px;
 	letter-spacing: 0;
@@ -276,7 +279,7 @@ body {
 }
 
 .action__prices--last {
-	color: rgb(136, 136, 136);
+	color: $colorGray;
 	text-decoration-line: line-through;
 }
 
@@ -284,7 +287,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 56px 33px;
+	gap: 56px 32px;
 }
 
 .product-box {
@@ -292,7 +295,7 @@ body {
 }
 
 .link-box {
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	line-height: 24px;
 	letter-spacing: 0;
 	text-decoration-line: underline;
@@ -300,9 +303,9 @@ body {
 }
 
 .link-box:hover {
-	color: rgb(136, 136, 136);
+	color: $colorGray;
 	font-family: Montserrat;
-	font-size: 16px;
+	font-size: $fontSize;
 	line-height: 24px;
 	letter-spacing: 0;
 	text-decoration: none;
@@ -327,13 +330,12 @@ body {
 }
 
 .footer__info {
-	display: flex;
-	justify-content: space-between;
+	@include flexBetween();
 	column-gap: 129px;
 }
 
 .footer-icon:hover path {
-	fill: #000;
+	fill: $colorDark;
 }
 
 .footer__nav,
@@ -345,7 +347,7 @@ body {
 }
 
 .footer__nav-heading {
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 29px;
@@ -358,7 +360,7 @@ body {
 
 .footer__nav-menu a,
 .footer__nav a {
-	color: rgb(136, 136, 136);
+	color: $colorGray;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 17px;
@@ -378,7 +380,7 @@ body {
 }
 
 .footer__form-heading {
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-family: Montserrat;
 	font-size: 12px;
 	font-weight: 400;
@@ -392,12 +394,12 @@ body {
 	box-sizing: border-box;
 	border: 1px solid rgb(196, 196, 196);
 	border-radius: 16px;
-	background: rgb(255, 255, 255);
+	background: $colorLight;
 	width: 260px;
 	height: 40px;
 	outline: none;
 	padding: 12px 17px;
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-family: Montserrat;
 	font-size: 12px;
 	font-weight: 400;
@@ -417,7 +419,7 @@ body {
 .footer-button {
 	border-radius: 16px;
 	background: rgba(222, 215, 215, 0.41);
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-family: Montserrat;
 	font-size: 12px;
 	line-height: 15px;
@@ -430,7 +432,7 @@ body {
 
 .footer-button:hover {
 	background: rgba(0, 0, 0);
-	color: #fff;
+	color: $colorLight;
 }
 
 /*Styles for the catalog page*/
@@ -451,14 +453,13 @@ body {
 }
 
 .top-heading-catalog {
-	display: flex;
-	justify-content: space-between;
+	@include flexBetween();
 	padding-bottom: 32px;
 	align-items: center;
 }
 
 .breadcrumbs a {
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	line-height: 32px;
 	letter-spacing: 0;
 }
@@ -484,9 +485,9 @@ body {
 	box-sizing: border-box;
 	border: 1px solid rgb(196, 196, 196);
 	border-radius: 20px;
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-family: Montserrat;
-	font-size: 16px;
+	font-size: $fontSize;
 	line-height: 20px;
 	letter-spacing: 0;
 	padding-left: 14px;
@@ -525,7 +526,7 @@ body {
 	line-height: 24px;
 	letter-spacing: 0;
 	text-decoration-line: underline;
-	background-color: #fff;
+	background-color: $colorLight;
 }
 
 /*Styles for the cart page*/
@@ -565,11 +566,10 @@ body {
 }
 
 .cart-content__name {
-	display: flex;
-	justify-content: space-between;
+	@include flexBetween();
 	line-height: 20px;
 	letter-spacing: 0px;
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	margin-bottom: 14px;
 }
 
@@ -594,8 +594,7 @@ body {
 }
 
 .cart-content__product {
-	display: flex;
-	justify-content: space-between;
+	@include flexBetween();
 	width: 100%;
 }
 
@@ -608,13 +607,13 @@ body {
 	font-weight: 500;
 	line-height: 29px;
 	letter-spacing: 0;
-	color: #000;
+	color: $colorDark;
 	margin-bottom: 14px;
 	display: inline-block;
 }
 
 .cart-content__info-description {
-	color: rgb(136, 136, 136);
+	color: $colorGray;
 	font-size: 14px;
 	line-height: 17px;
 	letter-spacing: 0;
@@ -635,7 +634,7 @@ body {
 }
 
 .cart-link__choice {
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-size: 14px;
 	line-height: 210%;
 	letter-spacing: 0;
@@ -650,7 +649,7 @@ body {
 	border: none;
 	outline: none;
 	text-align: center;
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 210%;
@@ -667,7 +666,7 @@ body {
 .cart-button__route {
 	width: 200px;
 	height: 37px;
-	border: 1px solid rgb(0, 0, 0);
+	border: 1px solid $colorDark;
 	border-radius: 50px;
 	color: rgb(2, 2, 2);
 	font-family: Montserrat;
@@ -676,7 +675,7 @@ body {
 	line-height: 17px;
 	letter-spacing: 0px;
 	text-align: center;
-	background-color: #fff;
+	background-color: $colorLight;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -685,8 +684,8 @@ body {
 
 .cart-button__reset:hover,
 .cart-button__route:hover {
-	color: #fff;
-	background-color: #000;
+	color: $colorLight;
+	background-color: $colorDark;
 }
 
 .order-form {
@@ -694,12 +693,12 @@ body {
 	height: 556px;
 	border-radius: 20px;
 	background: rgb(247, 246, 246);
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	padding: 42px 44px;
 }
 
 .order-heading {
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 29px;
@@ -713,7 +712,7 @@ body {
 	width: 288px;
 	background: rgb(247, 246, 246);
 	outline: none;
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-family: Montserrat;
 	font-size: 14px;
 	line-height: 17px;
@@ -730,7 +729,7 @@ body {
 }
 
 .order-price {
-	color: rgb(0, 0, 0);
+	color: $colorDark;
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 29px;
@@ -747,13 +746,13 @@ body {
 	border: 1px solid rgb(4, 4, 4);
 	border-radius: 20px;
 	font-family: Montserrat;
-	font-size: 16px;
+	font-size: $fontSize;
 	cursor: pointer;
 }
 
 .order-button:hover {
-	background-color: #000;
-	color: #fff;
+	background-color: $colorDark;
+	color: $colorLight;
 }
 
 .action-box--cart {

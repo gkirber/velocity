@@ -1,0 +1,12 @@
+$colorDark: #000;
+$colorLight: #fff;
+$colorGray: rgb(136, 136, 136);
+$widthContent: 1200px;
+$gapCart: 32px;
+$line: 0.5px solid rgba(255, 255, 255, 0.8);
+$fontSize: 16px;
+
+@mixin flexBetween() {
+	display: flex;
+	justify-content: space-between;
+}
