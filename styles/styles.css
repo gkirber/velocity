@@ -30,6 +30,31 @@ body {
   padding-top: 16px;
 }
 
+@keyframes myLogo {
+  0%, 100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-30px) rotate(6deg);
+  }
+  30% {
+    transform: translateX(15px) rotate(-6deg);
+  }
+  45% {
+    transform: translateX(-15px) rotate(3.6deg);
+  }
+  60% {
+    transform: translateX(9px) rotate(-2.4deg);
+  }
+  75% {
+    transform: translateX(-6px) rotate(1.2deg);
+  }
+}
+.logo {
+  animation: myLogo 2s ease 0s 1;
+}
+
 .logo--top path {
   fill: #fff;
 }
@@ -136,6 +161,17 @@ body {
   margin-bottom: 64px;
 }
 
+.for__content * {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.for__content *:hover,
+.action:hover,
+.product:hover {
+  transform: scale(1.05);
+}
+
 .for__heading,
 .action-box__heading,
 .product-box__heading {
@@ -212,6 +248,8 @@ body {
 .product {
   width: 378.6666666667px;
   position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .action__img,
@@ -382,13 +420,12 @@ body {
 }
 
 .footer__form-heading {
-  color: rgb(0, 0, 0);
-  font-family: Montserrat;
+  color: #000;
   font-size: 12px;
   font-weight: 400;
   line-height: 15px;
   letter-spacing: 0%;
-  text-align: left;
+  text-align: center;
 }
 .footer__form-heading--mobile {
   display: none;
@@ -427,6 +464,29 @@ body {
   letter-spacing: 0;
 }
 
+@keyframes subscribe {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
 .footer-button {
   border-radius: 16px;
   background: rgba(222, 215, 215, 0.41);
@@ -439,6 +499,7 @@ body {
   width: 260px;
   height: 40px;
   cursor: pointer;
+  animation: subscribe 2s ease 3s infinite normal forwards;
 }
 
 .footer-button:hover {
@@ -778,6 +839,7 @@ body {
   font-family: Montserrat;
   font-size: 16px;
   cursor: pointer;
+  animation: subscribe 2s ease 3s infinite normal forwards;
 }
 
 .order-button:hover {
@@ -1137,13 +1199,6 @@ body {
   }
   .footer__form-heading--mobile {
     display: block;
-    color: rgb(0, 0, 0);
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 15px;
-    letter-spacing: 0%;
-    text-align: left;
   }
   .footer__form {
     align-items: center;
