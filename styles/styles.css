@@ -968,7 +968,7 @@ body {
 }
 @media (width < 834px) {
   .center {
-    padding-left: 24px;
+    padding-left: 8px;
     padding-right: 24px;
   }
   .header {
@@ -981,6 +981,11 @@ body {
   .logo--top {
     height: 22px;
   }
+  .logo {
+    align-self: flex-start;
+    margin-left: 0;
+    padding-left: 0;
+  }
   .top__search-form,
   .top__nav {
     display: none;
@@ -991,9 +996,17 @@ body {
     align-items: center;
     -moz-column-gap: 32px;
          column-gap: 32px;
+    align-self: flex-end;
+    margin-right: 0;
+    padding-right: 0;
   }
   .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 29px;
+    margin-left: 0;
+    padding-left: 0;
     border: none;
   }
   .top__heading {
